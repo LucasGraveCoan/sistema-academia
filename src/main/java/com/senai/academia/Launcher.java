@@ -1,4 +1,4 @@
-package com.senai.sistemaacademia;
+package com.senai.academia;
 
 import javafx.application.Application;
 

@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.senai.sistemaacademia/com.senai.sistemaacademia.HelloApplication</mainClass>
+                            <mainClass>com.senai.sistemaacademia/com.senai.academia.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
