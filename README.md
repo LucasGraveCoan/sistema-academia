@@ -90,7 +90,7 @@ sistema-academia/
 - Git e GitHub
 
 ## 👤 Autor
-**augusto-rech** — estudante de Desenvolvimento de Sistemas.
+**augusto-cell** — estudante de Desenvolvimento de Sistemas.
 **MarcoAntonioAbel** — estudante de Desenvolvimento de Sistemas.
 **LucasGraveCoan** — estudante de Desenvolvimento de Sistemas.
 **rotch-jolibois** — estudante de Desenvolvimento de Sistemas.
