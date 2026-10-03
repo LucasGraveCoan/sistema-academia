@@ -1,4 +1,4 @@
-package com.senai.academia.entidades;
+package com.senai.sistemaacademia.entidades;
 
 public class Plano {
     private int id;

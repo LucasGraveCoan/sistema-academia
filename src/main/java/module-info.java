@@ -3,6 +3,6 @@ module com.senai.sistemaacademia {
     requires javafx.fxml;
 
 
-    opens com.senai.academia to javafx.fxml;
-    exports com.senai.academia;
+    opens com.senai.sistemaacademia to javafx.fxml;
+    exports com.senai.sistemaacademia;
 }

@@ -1,4 +1,4 @@
-package com.senai.academia.entidades;
+package com.senai.sistemaacademia.entidades;
 
 import java.util.List;
 
