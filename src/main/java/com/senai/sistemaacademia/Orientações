@@ -1,0 +1,43 @@
+Sistema academia
+
+Cada aluno tem suas info de cadastro e elas estão associadas a um plano da academia e dos professores tbm;
+Tem que ter mais de de um tipo de plano
+( mensal, trimestral, semestral, anual);
+Pode ter tipo de pagamento;
+Histórico de pagamento;
+Prazo de pagamento;
+Tem que estar em dia;
+Relatório dos treinos com as informações;
+Os alunos podem ou ser acompanhados por um professor;
+UM ALUNO PODE TER MAIS DE UM PROFESSOR? Pode
+Um professor pode acompanhar mais de um aluno;
+Um aluno pode ter mais de um treino, em A, B e C;
+Só um treino no geral;
+Treino tem mais de um exercício;
+TODOS OS ALUNOS PRECISAM TER UM TREINO? Não, e pode fazer o próprio treino
+UM ALUNO PODE TBM SER UM PROFESSOR E VICE VERSA? Pode, instrutor não paga
+Cada exercício tem que ter suas séries e repetições;
+Os exercícios podem ter informações específicas de execução;
+Diferentes tipos de informações;
+PRECISA TER ESSAS INFORMAÇÕES? Sim
+O objetivo é que a academia possa consultar os treinos e os alunos;
+Cadastro tem q ter peso altura idade objetivo, e tem que ser alterável;
+E tem que poder mudar;
+Tem que ter relatório financeiro;
+Compra de equipamentos;
+Gastos;
+Loja da academia;
+Cronograma de horários;
+Outros funcionários da academia;
+
+
+Funcionalidades:
+
+Cadastrar aluno;
+Cadastrar professor;
+Cadastrar plano;
+Associar os alunos aos planos;
+Incluir exercícios nos treinos;
+Registro de séries e repetições;
+Consulta do treino;
+Identificação do professor responsáviel
