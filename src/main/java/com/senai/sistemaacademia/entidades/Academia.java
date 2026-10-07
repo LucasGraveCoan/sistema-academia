@@ -18,9 +18,33 @@ public class Academia {
         this.treinos = new ArrayList<>();
     }
 
-    private List<Aluno> getAlunos() { return alunos; }
-    private List<Professor> getProfessores() { return professores; }
-    private List<Plano> getPlanos() { return planos; }
-    private List<Exercicio> getExercicios() { return exercicios; }
-    private List<Treino> getTreinos() { return treinos; }
+    public List<Aluno> getAlunos() { return alunos; }
+
+    public List<Professor> getProfessores() { return professores; }
+
+    public List<Plano> getPlanos() { return planos; }
+
+    public List<Exercicio> getExercicios() { return exercicios; }
+
+    public List<Treino> getTreinos() { return treinos; }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+
+    public void setProfessores(List<Professor> professores) {
+        this.professores = professores;
+    }
+
+    public void setPlanos(List<Plano> planos) {
+        this.planos = planos;
+    }
+
+    public void setExercicios(List<Exercicio> exercicios) {
+        this.exercicios = exercicios;
+    }
+
+    public void setTreinos(List<Treino> treinos) {
+        this.treinos = treinos;
+    }
 }

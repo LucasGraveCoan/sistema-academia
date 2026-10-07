@@ -1,6 +1,6 @@
 package com.senai.sistemaacademia.entidades;
 
 public class Main {
-//singleton
+//alguém faz a main com do while
     
 }
