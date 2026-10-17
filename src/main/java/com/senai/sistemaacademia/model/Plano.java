@@ -1,4 +1,4 @@
-package com.senai.sistemaacademia.entidades;
+package com.senai.sistemaacademia.model;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ public class Plano {
     ArrayList <String> nome = new ArrayList<>();
     private int duracaoMeses;
     private double valor;
-//fazer getter e setter e colocar um metodo para o usuario no caso o professor da academia criar o plano
+//fazer getter e setter
     public void addPlano(){
         nome.add("");
     }

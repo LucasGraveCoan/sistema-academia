@@ -1,4 +1,4 @@
-package com.senai.sistemaacademia.entidades;
+package com.senai.sistemaacademia.model;
 
 import java.time.LocalDateTime;
 import java.util.List;

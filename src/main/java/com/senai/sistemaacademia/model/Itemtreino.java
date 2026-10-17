@@ -1,4 +1,4 @@
-package com.senai.sistemaacademia.entidades;
+package com.senai.sistemaacademia.model;
 
 public class Itemtreino {
     private Exercicio exercicio;

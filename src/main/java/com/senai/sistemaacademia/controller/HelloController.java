@@ -1,4 +1,4 @@
-package com.senai.sistemaacademia;
+package com.senai.sistemaacademia.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
