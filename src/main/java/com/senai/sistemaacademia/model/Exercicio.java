@@ -28,4 +28,13 @@ public class Exercicio {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-}
+
+
+    }
+
+
+
+
+
+
+

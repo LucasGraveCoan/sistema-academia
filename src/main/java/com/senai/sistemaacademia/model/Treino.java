@@ -1,15 +1,17 @@
 package com.senai.sistemaacademia.model;
-
+import java.util.*;
 import java.time.LocalDateTime;
-import java.util.List;
+
+
 
 public class Treino {
     private int id;
-    private String nome;
     private String objetivo;
     private LocalDateTime dataCriacao = LocalDateTime.now();
     private Professor professor;
-    private List<Itemtreino> itens;
+    private String nome;
+    private List<Itemtreino> itens = new ArrayList<>();
+
 
     public int getId() {
         return id;
@@ -57,5 +59,12 @@ public class Treino {
 
     public void setItens(List<Itemtreino> itens) {
         this.itens = itens;
+
+
+    }
+
+    public void adicionarItem(Itemtreino item) {
+        itens.add(item);
     }
 }
+

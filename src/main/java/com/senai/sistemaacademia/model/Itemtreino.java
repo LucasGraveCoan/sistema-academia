@@ -1,11 +1,17 @@
 package com.senai.sistemaacademia.model;
 
+import java.util.*;
+import java.util.ArrayList;
+
 public class Itemtreino {
     private Exercicio exercicio;
     private int series;
     private int repeticoes;
     private double carga;
     private String observacao;
+
+
+
 
     public Exercicio getExercicio() {
         return exercicio;
@@ -46,4 +52,8 @@ public class Itemtreino {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
-}
+
+
+
+    }
+
