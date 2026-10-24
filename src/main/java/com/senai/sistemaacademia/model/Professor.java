@@ -1,6 +1,5 @@
 package com.senai.sistemaacademia.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Professor {
@@ -8,13 +7,7 @@ public class Professor {
     private String nome;
     private String cpf;
     private String telefone;
-    private String cargo;
-    private double salario;
-    private List<Aluno> alunos = new ArrayList<>();
-
-    public Professor() {
-        this.cargo = "Professor";
-    }
+    private List<Aluno> alunos;
 
     public int getId() {
         return id;
@@ -46,22 +39,6 @@ public class Professor {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
     }
 
     public List<Aluno> getAlunos() {
