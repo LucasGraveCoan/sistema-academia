@@ -2,6 +2,7 @@ module com.senai.sistemaacademia {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
+    requires java.sql;
 
 
     opens com.senai.sistemaacademia to javafx.fxml;
