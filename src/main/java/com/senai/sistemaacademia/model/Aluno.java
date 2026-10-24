@@ -5,16 +5,14 @@ import java.util.List;
 
 public class Aluno {
     private int id;
-    private String nome;
+    private String str = nome;
     private String cpf;
-    private LocalDate dataNascimento;
+    private LocalDate  dataNascimento;
     private String telefone;
     private String email;
     private Plano plano;
     private Professor professor;
     private List<Treino> treinos;
-
-
     public int getId() {
         return id;
     }
