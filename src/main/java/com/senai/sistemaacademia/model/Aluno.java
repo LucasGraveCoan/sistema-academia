@@ -1,7 +1,8 @@
 package com.senai.sistemaacademia.model;
 
+import java.util.*;
 import java.time.LocalDate;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Aluno {
     private int id;
@@ -12,7 +13,7 @@ public class Aluno {
     private String email;
     private Plano plano;
     private Professor professor;
-    private List<Treino> treinos;
+    private List<Treino> treinos = new ArrayList<>();
 
 
     public int getId() {
@@ -82,5 +83,21 @@ public class Aluno {
     public void setTreinos(List<Treino> treinos) {
         this.treinos = treinos;
     }
+
+    public void consultarTreinos() {
+        if (treinos.isEmpty()) {
+            System.out.println("aluno sem treinos");
+        } else {
+            for (Treino treino : treinos) {
+                System.out.println("Treino:" + treino.getNome());
+
+                for (Itemtreino item: treino.getItens()){
+                    System.out.println(item.getExercicio().getNome()+ "-"+ item.getSeries()+ "series- "+item.getRepeticoes()+ "repeticoes"+
+                    item.getCarga()+ "kg");
+                }
+            }
+        }
+    }
 }
+
 

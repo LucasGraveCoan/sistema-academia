@@ -1,4 +1,7 @@
 package com.senai.sistemaacademia.model;
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
 import java.util.*;
 import java.time.LocalDateTime;
 
@@ -10,7 +13,7 @@ public class Treino {
     private LocalDateTime dataCriacao = LocalDateTime.now();
     private Professor professor;
     private String nome;
-    private List<Itemtreino> itens = new ArrayList<>();
+    public List<Itemtreino> itens = new ArrayList<>();
 
 
     public int getId() {
@@ -62,9 +65,11 @@ public class Treino {
 
 
     }
-
     public void adicionarItem(Itemtreino item) {
         itens.add(item);
     }
 }
+
+
+
 
