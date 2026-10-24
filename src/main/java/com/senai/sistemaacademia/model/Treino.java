@@ -33,7 +33,7 @@ public class Treino {
         return objetivo;
     }
 
-    public void setObjetivo(String objetivo) {
+    public void setObjetivo(String objetivo)  {
         this.objetivo = objetivo;
     }
 

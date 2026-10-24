@@ -47,4 +47,6 @@ public class Academia {
     public void setTreinos(List<Treino> treinos) {
         this.treinos = treinos;
     }
+
+
 }

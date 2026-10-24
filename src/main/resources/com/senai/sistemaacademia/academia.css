@@ -1,0 +1,79 @@
+
+.root-container {
+    -fx-background-color: #0B1120;
+    -fx-font-family: "Segoe UI";
+}
+
+.welcome-card {
+    -fx-background-color: #151F32;
+    -fx-background-radius: 24px;
+    -fx-border-color: #263650;
+    -fx-border-radius: 24px;
+    -fx-border-width: 1px;
+    -fx-padding: 48px 40px 42px 40px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.30), 28, 0.15, 0, 10);
+}
+
+.brand-label {
+    -fx-text-fill: #38BDF8;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 3px;
+}
+
+.title-label {
+    -fx-text-fill: #F8FAFC;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.subtitle-label {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 15px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.primary-button {
+    -fx-background-color: #0EA5E9;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 24px;
+}
+
+.primary-button:hover {
+    -fx-background-color: #0284C7;
+    -fx-effect: dropshadow(gaussian, rgba(14, 165, 233, 0.25), 12, 0.2, 0, 3);
+}
+
+.primary-button:pressDed {
+    -fx-background-color: #0369A1;
+}
+
+.primary-button:focused {
+    -fx-border-color: #7DD3FC;
+    -fx-border-radius: 12px;
+    -fx-border-width: 2px;
+}
+
+.status-dot {
+    -fx-background-color: #22C55E;
+    -fx-background-radius: 50%;
+}
+
+.footer-label {
+    -fx-text-fill: #64748B;
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+}
+
+.bottom-label {
+    -fx-text-fill: #475569;
+    -fx-font-size: 10px;
+    -fx-letter-spacing: 2px;
+}

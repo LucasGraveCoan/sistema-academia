@@ -1,10 +1,17 @@
+
 package com.senai.sistemaacademia.service;
+
+import com.senai.sistemaacademia.model.Professor;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BancoDeDados {
 
     private static BancoDeDados bancoDeDados;
 
-    private BancoDeDados () {}
+    private List<Professor> professores = new ArrayList<>();
+
+    private BancoDeDados() {}
 
     public static BancoDeDados getInstance() {
         if (bancoDeDados == null) {
@@ -12,7 +19,17 @@ public class BancoDeDados {
         }
         return bancoDeDados;
     }
-    // public Long pegarProximoId() {
+
+    public List<Professor> getProfessores() {
+        return professores;
+    }
+
+    public void cadastrarProfessor(Professor professor) {
+        professores.add(professor);
+    }
+}
+
+// public Long pegarProximoId() {
     //        // lista vazia e id vazio (primeiro item da lista definitivo)
     //        if (carros.isEmpty() && ultimoId == null) {
     //            ultimoId = 1L;
@@ -32,4 +49,4 @@ public class BancoDeDados {
     // isso é só para se a gente for reutilizar esta logica no nosso código.
 
 
-}
+

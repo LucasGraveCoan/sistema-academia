@@ -10,6 +10,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
+// serve para abrir uma tela nova
+
 public class Navegacao {
     public static void abrirTela(String nomeArquivo, String titulo)
             throws IOException {

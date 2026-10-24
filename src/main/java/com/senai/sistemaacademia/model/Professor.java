@@ -16,6 +16,13 @@ public class Professor {
         this.cargo = "Professor";
     }
 
+    public Professor(String nome, String cpf, String telefone) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+    }
+
     public int getId() {
         return id;
     }
