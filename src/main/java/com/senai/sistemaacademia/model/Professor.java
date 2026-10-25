@@ -17,7 +17,7 @@ public class Professor {
     }
 
     public Professor(String nome, String cpf, String telefone) {
-        this.id = id;
+        this();
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;

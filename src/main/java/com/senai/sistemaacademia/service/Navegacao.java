@@ -1,45 +1,53 @@
 package com.senai.sistemaacademia.service;
 
+import com.senai.sistemaacademia.HelloApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-// serve para abrir uma tela nova
-
 public class Navegacao {
-    public static void abrirTela(String nomeArquivo, String titulo)
-            throws IOException {
 
-        Path pastaResources = Paths.get("src/main/resources");
+    public static void abrirTela(String nomeArquivo, String titulo) throws IOException {
+        String fxmlNome = nomeArquivo.endsWith(".fxml") ? nomeArquivo : nomeArquivo + ".fxml";
 
-        Path arquivoEncontrado;
+        // Tenta carregar via getResource (padrão JavaFX)
+        URL resource = HelloApplication.class.getResource(fxmlNome);
 
-        try (Stream<Path> arquivos = Files.walk(pastaResources)) {
-            arquivoEncontrado = arquivos
-                    .filter(Files::isRegularFile)
-                    .filter(p -> p.getFileName().toString().equals(nomeArquivo))
-                    .findFirst()
-                    .orElseThrow(() -> new IOException(
-                            "FXML não encontrado: " + nomeArquivo));
+        // Se não encontrar direto, busca recursivamente na pasta de resources
+        if (resource == null) {
+            Path pastaResources = Paths.get("src/main/resources");
+            if (Files.exists(pastaResources)) {
+                try (Stream<Path> arquivos = Files.walk(pastaResources)) {
+                    Path arquivoEncontrado = arquivos
+                            .filter(Files::isRegularFile)
+                            .filter(p -> p.getFileName().toString().equalsIgnoreCase(fxmlNome))
+                            .findFirst()
+                            .orElse(null);
+
+                    if (arquivoEncontrado != null) {
+                        resource = arquivoEncontrado.toUri().toURL();
+                    }
+                }
+            }
         }
 
-        FXMLLoader loader = new FXMLLoader(arquivoEncontrado.toUri().toURL());
+        if (resource == null) {
+            throw new IOException("FXML não encontrado: " + nomeArquivo);
+        }
+
+        FXMLLoader loader = new FXMLLoader(resource);
         Scene scene = new Scene(loader.load());
 
         Stage stage = new Stage();
         stage.setTitle(titulo);
         stage.setScene(scene);
         stage.show();
-
-        // para puxar o metodo no hellocontroller é assim que se usa.
-        //Navegacao.abrirTela("tela-listagem-de-carros.fxml",
-        //                "Tela listagem de carros");
-
     }
 }

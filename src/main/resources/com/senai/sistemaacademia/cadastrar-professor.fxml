@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
@@ -7,29 +6,63 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="15"
+<VBox alignment="CENTER"
+      spacing="16.0"
+      prefWidth="560.0"
+      prefHeight="580.0"
+      styleClass="root-container"
+      stylesheets="@academia.css"
       xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
       fx:controller="com.senai.sistemaacademia.controller.HelloController">
 
     <padding>
-        <Insets top="30" right="30" bottom="30" left="30"/>
+        <Insets top="30.0" right="30.0" bottom="30.0" left="30.0"/>
     </padding>
 
-    <Label text="Cadastro de Professor"
-           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <VBox spacing="14.0"
+          maxWidth="460.0"
+          styleClass="welcome-card">
 
-    <TextField fx:id="nomeProfessor"
-               promptText="Nome completo"/>
+        <Label text="SISTEMA ACADEMIA"
+               styleClass="brand-label"/>
 
-    <TextField fx:id="cpfProfessor"
-               promptText="CPF"/>
+        <Label text="Cadastro de Professor"
+               styleClass="title-label"/>
 
-    <TextField fx:id="telefoneProfessor"
-               promptText="Telefone"/>
+        <Label text="Preencha os dados do novo professor abaixo:"
+               styleClass="subtitle-label"/>
 
-    <Button text="Cadastrar Professor"
-            onAction="#cadastrarProfessor"
-            maxWidth="Infinity"/>
+        <VBox spacing="6.0">
+            <Label text="Nome Completo"
+                   styleClass="field-label"/>
+            <TextField fx:id="nomeProfessor"
+                       promptText="Digite o nome do professor"
+                       styleClass="text-field"/>
+        </VBox>
+
+        <VBox spacing="6.0">
+            <Label text="CPF"
+                   styleClass="field-label"/>
+            <TextField fx:id="cpfProfessor"
+                       promptText="000.000.000-00"
+                       styleClass="text-field"/>
+        </VBox>
+
+        <VBox spacing="6.0">
+            <Label text="Telefone"
+                   styleClass="field-label"/>
+            <TextField fx:id="telefoneProfessor"
+                       promptText="(00) 00000-0000"
+                       styleClass="text-field"/>
+        </VBox>
+
+        <Button text="Cadastrar Professor"
+                onAction="#cadastrarProfessor"
+                styleClass="primary-button"
+                maxWidth="Infinity"
+                prefHeight="44.0"/>
+
+    </VBox>
 
 </VBox>
-
