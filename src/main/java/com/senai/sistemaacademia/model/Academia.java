@@ -48,5 +48,13 @@ public class Academia {
         this.treinos = treinos;
     }
 
+    public void adicionarAluno(Aluno aluno) {
+        if (aluno != null && !alunos.contains(aluno)) {
+            alunos.add(aluno);
+        }
+    }
 
+    public void removerAluno(Aluno aluno) {
+        alunos.remove(aluno);
+    }
 }
