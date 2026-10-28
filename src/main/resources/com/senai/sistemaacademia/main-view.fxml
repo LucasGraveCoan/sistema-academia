@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1200.0"
+            stylesheets="@academia.css"
+            styleClass="root-container"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.senai.sistemaacademia.controller.MainController">
+
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <left>
+        <VBox spacing="6.0" styleClass="sidebar">
+
+            <!-- Identidade Visual -->
+            <VBox styleClass="sidebar-brand-box">
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <Label text="⚡" styleClass="brand-icon"/>
+                    <VBox spacing="2.0">
+                        <Label text="SISTEMA ACADEMIA" styleClass="brand-title"/>
+                        <Label text="SENAI • FITNESS PRO" styleClass="brand-subtitle"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <Label text="MÓDULOS DO SISTEMA" styleClass="sidebar-menu-title"/>
+
+            <!-- Botões de Navegação -->
+            <Button fx:id="btnInicio" text="🏠  Início"
+                    maxWidth="Infinity" onAction="#navegar"
+                    styleClass="nav-button"/>
+
+            <Button fx:id="btnAlunos" text="👥  Alunos"
+                    maxWidth="Infinity" onAction="#navegar"
+                    styleClass="nav-button"/>
+
+            <Button fx:id="btnProfessores" text="👨‍🏫  Professores"
+                    maxWidth="Infinity" onAction="#navegar"
+                    styleClass="nav-button"/>
+
+            <Button fx:id="btnPlanos" text="💳  Planos"
+                    maxWidth="Infinity" onAction="#navegar"
+                    styleClass="nav-button"/>
+
+            <Button fx:id="btnExercicios" text="🏋️  Exercícios"
+                    maxWidth="Infinity" onAction="#navegar"
+                    styleClass="nav-button"/>
+
+            <Button fx:id="btnTreinos" text="📋  Treinos"
+                    maxWidth="Infinity" onAction="#navegar"
+                    styleClass="nav-button"/>
+
+            <!-- Espaçador Flexível -->
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <!-- Rodapé da Barra Lateral -->
+            <VBox styleClass="sidebar-footer-box">
+                <Label text="Ambiente Acadêmico" styleClass="sidebar-footer-title"/>
+                <Label text="SENAI • Curso JavaFX" styleClass="sidebar-footer-sub"/>
+                <Label text="Modo: Demonstração Visual" styleClass="sidebar-footer-sub"/>
+            </VBox>
+
+        </VBox>
+    </left>
+
+    <!-- ÁREA PRINCIPAL -->
+    <center>
+        <VBox>
+            <!-- Barra Superior (Top Header) -->
+            <HBox alignment="CENTER_LEFT" styleClass="top-header">
+                <VBox spacing="3.0">
+                    <Label fx:id="screenTitle" text="Painel Principal" styleClass="screen-title"/>
+                    <Label fx:id="screenSubtitle" text="Visão geral do sistema de gerenciamento" styleClass="screen-subtitle"/>
+                </VBox>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="● Sistema Operacional" styleClass="status-badge"/>
+                </HBox>
+            </HBox>
+
+            <!-- Conteúdo Dinâmico -->
+            <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS" styleClass="content-area"/>
+        </VBox>
+    </center>
+
+</BorderPane>

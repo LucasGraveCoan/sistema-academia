@@ -1,8 +1,5 @@
 package com.senai.sistemaacademia.model;
 
-import java.util.*;
-import java.util.ArrayList;
-
 public class Itemtreino {
     private Exercicio exercicio;
     private int series;
@@ -10,8 +7,16 @@ public class Itemtreino {
     private double carga;
     private String observacao;
 
+    public Itemtreino() {
+    }
 
-
+    public Itemtreino(Exercicio exercicio, int series, int repeticoes, double carga, String observacao) {
+        this.exercicio = exercicio;
+        this.series = series;
+        this.repeticoes = repeticoes;
+        this.carga = carga;
+        this.observacao = observacao;
+    }
 
     public Exercicio getExercicio() {
         return exercicio;
@@ -19,6 +24,14 @@ public class Itemtreino {
 
     public void setExercicio(Exercicio exercicio) {
         this.exercicio = exercicio;
+    }
+
+    public String getExercicioNome() {
+        return exercicio != null ? exercicio.getNome() : "";
+    }
+
+    public String getGrupoMuscular() {
+        return exercicio != null ? exercicio.getGrupoMuscular() : "";
     }
 
     public int getSeries() {
@@ -52,8 +65,4 @@ public class Itemtreino {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
-
-
-
-    }
-
+}

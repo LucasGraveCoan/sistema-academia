@@ -23,6 +23,16 @@ public class Professor {
         this.telefone = telefone;
     }
 
+    public Professor(int id, String nome, String cpf, String telefone, String cargo, double salario) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.cargo = cargo;
+        this.salario = salario;
+        this.alunos = new ArrayList<>();
+    }
+
     public int getId() {
         return id;
     }
@@ -77,5 +87,10 @@ public class Professor {
 
     public void setAlunos(List<Aluno> alunos) {
         this.alunos = alunos;
+    }
+
+    @Override
+    public String toString() {
+        return nome != null ? nome : "Professor #" + id;
     }
 }

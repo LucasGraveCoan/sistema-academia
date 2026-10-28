@@ -1,12 +1,22 @@
 package com.senai.sistemaacademia.model;
 
-import java.util.ArrayList;
-
 public class Plano {
     private int id;
-    ArrayList <String> nome = new ArrayList<>();
+    private String nome;
+    private String modalidade;
     private int duracaoMeses;
     private double valor;
+
+    public Plano() {
+    }
+
+    public Plano(int id, String nome, String modalidade, int duracaoMeses, double valor) {
+        this.id = id;
+        this.nome = nome;
+        this.modalidade = modalidade;
+        this.duracaoMeses = duracaoMeses;
+        this.valor = valor;
+    }
 
     public int getId() {
         return id;
@@ -16,12 +26,20 @@ public class Plano {
         this.id = id;
     }
 
-    public ArrayList<String> getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(ArrayList<String> nome) {
+    public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getModalidade() {
+        return modalidade;
+    }
+
+    public void setModalidade(String modalidade) {
+        this.modalidade = modalidade;
     }
 
     public int getDuracaoMeses() {
@@ -40,10 +58,8 @@ public class Plano {
         this.valor = valor;
     }
 
-
+    @Override
+    public String toString() {
+        return nome != null ? nome : "Plano #" + id;
     }
-
-
-
-
-
+}
