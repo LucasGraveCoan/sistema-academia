@@ -1,6 +1,7 @@
 package com.senai.sistemaacademia.controller;
 
 import com.senai.sistemaacademia.model.Professor;
+import com.senai.sistemaacademia.service.ProfessorService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -57,6 +58,8 @@ public class ProfessoresController implements Initializable {
 
     private ObservableList<Professor> listaProfessores;
 
+    private ProfessorService professorService = new ProfessorService();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         configurarTabela();
@@ -105,6 +108,27 @@ public class ProfessoresController implements Initializable {
 
     @FXML
     public void salvar() {
+        String nomeProfessor = nomeField.getText();
+        String cpfProfessor = cpfField.getText();
+
+        String stringSalario = salarioField.getText();
+        Double salario = Double.parseDouble(stringSalario);
+
+        Professor professor = new Professor(
+                1,
+                nomeProfessor,
+                cpfProfessor,
+                telefoneField.getText(),
+                cargoField.getText(),
+                salario);
+
+        professorService.salvar(professor);
+
+        // for each (stream)
+        professorService.listar().forEach(p -> {
+            System.out.println(p);
+        });
+
         mostrarAlerta(Alert.AlertType.INFORMATION, "Demonstração Visual", "Professor pronto para ser cadastrado no backend.");
     }
 
